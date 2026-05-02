@@ -1,0 +1,138 @@
+{
+  "theme_identity": {
+    "domain": "Educational Game",
+    "theme_name": "Lezzet Dolu Sıfatlar (Tasty Adjectives)",
+    "archetype": "1 (Organic & Earthy) infused with Warm Turkish Lokanta",
+    "core_vibe": "Warm, inviting, amber/saffron/terracotta/cream, subtle çini tile motifs. Authentic restaurant atmosphere, slightly sophisticated but playful for 11-12 year olds.",
+    "target_audience": "6th Grade Turkish Students (11-12 years old)",
+    "color_theme": "light"
+  },
+  "colors": {
+    "backgrounds": {
+      "primary": "#F9F6F0",
+      "secondary": "#E8DCC4",
+      "dark_wood": "#3E2723",
+      "overlay": "rgba(62, 39, 35, 0.4)"
+    },
+    "text": {
+      "primary": "#2A2421",
+      "secondary": "#5C4A42",
+      "light": "#F9F6F0"
+    },
+    "adjective_types": {
+      "niteleme": {
+        "color": "#C44900",
+        "description": "Descriptive - Pomegranate/Terracotta Red",
+        "tailwind": "text-[#C44900] bg-[#C44900]/10 border-[#C44900]"
+      },
+      "isaret": {
+        "color": "#D68C45",
+        "description": "Demonstrative - Amber/Saffron",
+        "tailwind": "text-[#D68C45] bg-[#D68C45]/10 border-[#D68C45]"
+      },
+      "sayi": {
+        "color": "#4A6741",
+        "description": "Number - Olive/Pistachio Green",
+        "tailwind": "text-[#4A6741] bg-[#4A6741]/10 border-[#4A6741]"
+      },
+      "soru": {
+        "color": "#2C4251",
+        "description": "Interrogative - Deep Bosphorus Blue",
+        "tailwind": "text-[#2C4251] bg-[#2C4251]/10 border-[#2C4251]"
+      },
+      "belgisiz": {
+        "color": "#8C7A6B",
+        "description": "Indefinite - Warm Turkish Coffee Brown",
+        "tailwind": "text-[#8C7A6B] bg-[#8C7A6B]/10 border-[#8C7A6B]"
+      }
+    },
+    "ui_accents": {
+      "gold": "#D4AF37",
+      "border": "#D7CCC8"
+    }
+  },
+  "typography": {
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Literata:opsz,wght@7..72,400;7..72,600&family=JetBrains+Mono:wght@400;700&display=swap",
+    "headings": {
+      "font_family": "font-serif",
+      "css_definition": "font-family: 'Fraunces', serif;",
+      "weights": [400, 700],
+      "usage": "H1, H2, Scene Titles, Character Names. Use tight tracking (tracking-tight)."
+    },
+    "body": {
+      "font_family": "font-sans",
+      "css_definition": "font-family: 'Literata', serif;",
+      "weights": [400, 600],
+      "usage": "Dialogues, Rule descriptions, Menu items. Handles Turkish diacritics elegantly."
+    },
+    "monospace": {
+      "font_family": "font-mono",
+      "css_definition": "font-family: 'JetBrains Mono', monospace;",
+      "usage": "Score trackers, numbers in the Dashboard."
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8",
+    "spacing_scale": "Use p-8 to p-12 generously for bento grids and cards. Avoid cramped spaces. For nested elements with borders, use at least p-6 padding inside.",
+    "grids": {
+      "game_scenes": "Asymmetric layouts. Mobile-first grid-cols-1, md:grid-cols-12 gap-8. E.g., speech bubble takes col-span-8, character image takes col-span-4.",
+      "dashboard": "Control Room grid. Tight gaps (gap-4/gap-6). Every pixel utilized, grid-cols-1 md:grid-cols-3 lg:grid-cols-4."
+    }
+  },
+  "components": {
+    "waiter_speech_bubble": {
+      "classes": "bg-[#FFFDF7] border-2 border-[#D68C45] rounded-[32px] rounded-tl-none shadow-[4px_4px_12px_rgba(214,140,69,0.15)] p-6 md:p-8 relative",
+      "details": "Parchment feel. Use inline styling or before/after elements to give it a slight organic wobble or decorative ornate border.",
+      "highlighted_word": "font-bold border-b-2 px-1 rounded-sm cursor-pointer transition-colors"
+    },
+    "recipe_card": {
+      "classes": "bg-[#FDFBF7] border border-[#E8DCC4] shadow-[4px_4px_0px_#D68C45] rounded-md p-6 relative overflow-hidden",
+      "details": "Rule box that appears post-exercise. Add a faint top border line in #C44900 (red) to mimic old recipe index cards."
+    },
+    "menu_card": {
+      "classes": "bg-[#3E2723] text-[#F9F6F0] rounded-lg p-6 shadow-2xl border-[3px] border-[#D4AF37]",
+      "details": "Leather-bound aesthetic. Inside content area should be `bg-[#F9F6F0] text-[#2A2421]` for readability."
+    },
+    "receipt_score_badge": {
+      "classes": "bg-white border-t-4 border-dashed border-[#D7CCC8] shadow-sm px-4 py-6 text-center font-mono text-sm",
+      "details": "Use a zigzag/jagged bottom edge (can use clip-path or background-image radial-gradient technique)."
+    },
+    "buttons": {
+      "primary": "bg-[#C44900] hover:bg-[#A33D00] text-white px-8 py-4 rounded-full font-serif text-xl shadow-lg transition-transform hover:-translate-y-1 active:translate-y-0",
+      "audio": "bg-[#F9F6F0] text-[#D68C45] hover:bg-[#D68C45] hover:text-white p-3 rounded-full border border-[#D68C45] transition-colors focus:ring-2 focus:ring-[#D68C45] focus:ring-offset-2"
+    }
+  },
+  "animations": {
+    "lantern_flicker": "animate-[pulse_3s_ease-in-out_infinite]",
+    "steam": "Float up, slight sway left-right, fade out. Custom CSS keyframes needed.",
+    "object_glow": "drop-shadow(0 0 15px currentColor) pulse animation for Demonstrative (İşaret) adjectives indicating distance (bu/şu/o)."
+  },
+  "media": {
+    "images": [
+      {
+        "url": "https://images.pexels.com/photos/18727377/pexels-photo-18727377.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "background",
+        "description": "Cozy indoor view of a Turkish restaurant. Use as blurred background with black/40 or #3E2723/60 overlay to make text pop."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1772689277546-d4f956f6d030?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx0dXJraXNoJTIwdGlsZSUyMHBhdHRlcm58ZW58MHx8fHwxNzc3NzEyMzQ1fDA&ixlib=rb-4.1.0&q=85",
+        "category": "pattern",
+        "description": "Traditional Turkish tile pattern. Use as a highly transparent overlay (opacity 0.05 to 0.1) on the main app background or dashboard areas."
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "usage": "Use for volume/audio, close buttons, checkmarks, arrows."
+    }
+  },
+  "specific_scene_guidelines": {
+    "landing": "Warm welcome screen. Name input should look like a reservation book (Input field without generic borders, maybe underlined or with a subtle beige background).",
+    "scene_1": "Greeting dialogue. Waiter speech bubble dominates. Text includes descriptive adjectives (Niteleme). User clicks words to highlight them. Words map to #C44900 (Terracotta) on hover/active.",
+    "scene_2": "Table seating. 3 tables at different depths (near, mid, far). When 'bu' (near), 'şu' (mid), 'o' (far) are used, the corresponding table/plate emits a warm amber glow.",
+    "scene_3": "Menu card displaying numbers. 4 colored sticky-notes/cards corresponding to subtypes (asıl, sıra, üleştirme, kesir). Color code them harmoniously using greens/amber/red/blue from the adjective_types palette.",
+    "dashboard": "Teacher view. 'Control room' style grid. Dark header matching menu leather (#3E2723 text-[#F9F6F0]), table rows in cream and white alternating. High contrast for readability."
+  },
+  "testing": {
+    "instructions": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case. Examples: data-testid='start-game-button', data-testid='adjective-word', data-testid='audio-play-button', data-testid='student-score', data-testid='teacher-dashboard-link'."
+  }
+}
