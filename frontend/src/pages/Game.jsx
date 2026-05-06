@@ -6,12 +6,13 @@ import Scene1Greeting from "@/components/game/Scene1Greeting";
 import Scene2Seating from "@/components/game/Scene2Seating";
 import Scene3Menu from "@/components/game/Scene3Menu";
 import IdentifyScene from "@/components/game/IdentifyScene";
+import Scene6Boss from "@/components/game/Scene6Boss";
 import GameSummary from "@/components/game/GameSummary";
 import { getSession, updateScene, completeSession } from "@/lib/api";
 import { stopSpeaking } from "@/lib/tts";
 import { SCENE_4, SCENE_5 } from "@/lib/gameContent";
 
-const SCENE_KEYS = ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5"];
+const SCENE_KEYS = ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5", "scene_6"];
 
 const Game = () => {
   const { sessionId } = useParams();
@@ -128,6 +129,7 @@ const Game = () => {
           onFinish={finishScene}
         />
       )}
+      {sceneIndex === 5 && <Scene6Boss key="s6" onFinish={finishScene} />}
     </div>
   );
 };

@@ -247,4 +247,148 @@ export const SCENE_5 = {
   values: "Paylaşım & Misafirperverlik: Restoran herkese özen gösterir, kimseyi ayırmaz.",
 };
 
-export const SCENES = [SCENE_1, SCENE_2, SCENE_3, SCENE_4, SCENE_5];
+// ============ SAHNE 6 — BOSS ============
+// Each question: identify adj (+1) → pick type (+2) → write justification (+3)
+// justKeywords: any of these (case-insensitive, Turkish) in user's reasoning grants full +3
+export const SCENE_6 = {
+  id: "scene_6",
+  title: "Şef'in Sınavı — Genel Tekrar",
+  subtitle: "Sahne 6 / 6 · BOSS",
+  accent: "#3E2723",
+  intro: [
+    "Akşam bitti, şefimiz size son bir sınav hazırladı.",
+    "Her cümlede sıfatı bulun, türünü seçin ve neden öyle olduğunu kısaca yazın.",
+    "Tespit +1 · Tür +2 · Gerekçe +3 puan",
+  ],
+  questions: [
+    // NITELEME (3)
+    {
+      id: "b1",
+      sentence: "Bahçemizdeki kırmızı güller çok güzel.",
+      words: ["Bahçemizdeki", "kırmızı", "güller", "çok", "güzel"],
+      correctAdj: "kırmızı",
+      correctType: "niteleme",
+      justKeywords: ["niteleme", "renk", "özellik", "nitelik", "nasıl"],
+    },
+    {
+      id: "b2",
+      sentence: "Sıcak çorbamız sofraya geldi.",
+      words: ["Sıcak", "çorbamız", "sofraya", "geldi"],
+      correctAdj: "Sıcak",
+      correctType: "niteleme",
+      justKeywords: ["niteleme", "durum", "özellik", "nitelik"],
+    },
+    {
+      id: "b3",
+      sentence: "Yeşil bir ev gördüm.",
+      words: ["Yeşil", "bir", "ev", "gördüm"],
+      correctAdj: "Yeşil",
+      correctType: "niteleme",
+      justKeywords: ["niteleme", "renk", "özellik"],
+    },
+    // ISARET (3)
+    {
+      id: "b4",
+      sentence: "Bu masaya oturalım.",
+      words: ["Bu", "masaya", "oturalım"],
+      correctAdj: "Bu",
+      correctType: "isaret",
+      justKeywords: ["işaret", "yakın", "gösterir", "yer"],
+    },
+    {
+      id: "b5",
+      sentence: "Şu kitabı okumalısın.",
+      words: ["Şu", "kitabı", "okumalısın"],
+      correctAdj: "Şu",
+      correctType: "isaret",
+      justKeywords: ["işaret", "orta", "gösterir", "yer"],
+    },
+    {
+      id: "b6",
+      sentence: "O çocuk hızlı koşuyor.",
+      words: ["O", "çocuk", "hızlı", "koşuyor"],
+      correctAdj: "O",
+      correctType: "isaret",
+      justKeywords: ["işaret", "uzak", "gösterir", "yer"],
+    },
+    // SAYI (3)
+    {
+      id: "b7",
+      sentence: "Üç tane elma aldım.",
+      words: ["Üç", "tane", "elma", "aldım"],
+      correctAdj: "Üç",
+      correctType: "sayi",
+      justKeywords: ["sayı", "asıl", "miktar", "kaç"],
+    },
+    {
+      id: "b8",
+      sentence: "Birinci sırada bekliyoruz.",
+      words: ["Birinci", "sırada", "bekliyoruz"],
+      correctAdj: "Birinci",
+      correctType: "sayi",
+      justKeywords: ["sayı", "sıra", "kaçıncı", "derece"],
+    },
+    {
+      id: "b9",
+      sentence: "Yarım ekmek yedik.",
+      words: ["Yarım", "ekmek", "yedik"],
+      correctAdj: "Yarım",
+      correctType: "sayi",
+      justKeywords: ["sayı", "kesir", "parça", "yarım"],
+    },
+    // SORU (3)
+    {
+      id: "b10",
+      sentence: "Hangi kitabı okudun?",
+      words: ["Hangi", "kitabı", "okudun"],
+      correctAdj: "Hangi",
+      correctType: "soru",
+      justKeywords: ["soru", "sorar", "isim", "önce"],
+    },
+    {
+      id: "b11",
+      sentence: "Kaç kişi geldi?",
+      words: ["Kaç", "kişi", "geldi"],
+      correctAdj: "Kaç",
+      correctType: "soru",
+      justKeywords: ["soru", "miktar", "sayı", "sorar"],
+    },
+    {
+      id: "b12",
+      sentence: "Nasıl bir araba istiyorsun?",
+      words: ["Nasıl", "bir", "araba", "istiyorsun"],
+      correctAdj: "Nasıl",
+      correctType: "soru",
+      justKeywords: ["soru", "nitelik", "sorar", "özellik"],
+    },
+    // BELGISIZ (3)
+    {
+      id: "b13",
+      sentence: "Bazı insanlar geç kaldı.",
+      words: ["Bazı", "insanlar", "geç", "kaldı"],
+      correctAdj: "Bazı",
+      correctType: "belgisiz",
+      justKeywords: ["belgisiz", "belirsiz", "kesin değil", "miktar"],
+    },
+    {
+      id: "b14",
+      sentence: "Birkaç çocuk parka gitti.",
+      words: ["Birkaç", "çocuk", "parka", "gitti"],
+      correctAdj: "Birkaç",
+      correctType: "belgisiz",
+      justKeywords: ["belgisiz", "belirsiz", "az", "kesin değil"],
+    },
+    {
+      id: "b15",
+      sentence: "Hiçbir öğrenci kalmamış.",
+      words: ["Hiçbir", "öğrenci", "kalmamış"],
+      correctAdj: "Hiçbir",
+      correctType: "belgisiz",
+      justKeywords: ["belgisiz", "yokluk", "olumsuz", "kesin değil"],
+    },
+  ],
+  values:
+    "Düzenli çalışma: Akşam boyunca öğrendiklerini şefimize göstererek emeğini taçlandırırsın.",
+};
+
+export const SCENES = [SCENE_1, SCENE_2, SCENE_3, SCENE_4, SCENE_5, SCENE_6];

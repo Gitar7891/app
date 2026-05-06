@@ -9,9 +9,10 @@ const SCENE_META = {
   scene_3: { label: "Sayı", color: "#4A6741" },
   scene_4: { label: "Soru", color: "#2C4251" },
   scene_5: { label: "Belgisiz", color: "#8C7A6B" },
+  scene_6: { label: "Boss · Şef", color: "#3E2723" },
 };
 
-const SCENE_KEYS = ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5"];
+const SCENE_KEYS = ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5", "scene_6"];
 
 const formatDate = (iso) => {
   if (!iso) return "—";
@@ -142,7 +143,7 @@ const TeacherDashboard = () => {
             <h2 className="font-serif-display text-lg text-[#2A2421] mb-4">
               Sahne Bazında Ortalama
             </h2>
-            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
               {Object.entries(stats.scene_stats).map(([key, s]) => {
                 const meta = SCENE_META[key];
                 return (
@@ -200,6 +201,7 @@ const TeacherDashboard = () => {
                   <th className="px-5 py-3 font-serif-display">S3</th>
                   <th className="px-5 py-3 font-serif-display">S4</th>
                   <th className="px-5 py-3 font-serif-display">S5</th>
+                  <th className="px-5 py-3 font-serif-display">S6</th>
                   <th className="px-5 py-3 font-serif-display text-right">
                     Toplam
                   </th>
@@ -208,14 +210,14 @@ const TeacherDashboard = () => {
               <tbody>
                 {loading && (
                   <tr>
-                    <td colSpan={10} className="text-center py-12 text-[#8C7A6B]">
+                    <td colSpan={11} className="text-center py-12 text-[#8C7A6B]">
                       Yükleniyor...
                     </td>
                   </tr>
                 )}
                 {!loading && filtered.length === 0 && (
                   <tr>
-                    <td colSpan={10} className="text-center py-12 text-[#8C7A6B]">
+                    <td colSpan={11} className="text-center py-12 text-[#8C7A6B]">
                       Henüz oturum yok.
                     </td>
                   </tr>

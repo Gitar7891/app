@@ -146,7 +146,7 @@ async def teacher_stats():
 
     # Per-scene averages
     scene_stats: Dict[str, Dict[str, float]] = {}
-    for scene_key in ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5"]:
+    for scene_key in ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5", "scene_6"]:
         scores, maxes = [], []
         for s in all_sessions:
             sc = s.get("scenes", {}).get(scene_key)
