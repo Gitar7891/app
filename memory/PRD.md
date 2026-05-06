@@ -28,6 +28,18 @@ Türkiye Maarif Modeli'ne uygun, 6. sınıf Türkçe dersi "Sıfat Türleri" kon
 - Türk lokantası atmosferi
 - Maarif Modeli değerleri (misafirperverlik, nezaket, paylaşım)
 
+## Implemented (2026-02 — Iteration 3)
+- ✅ **Sahne 6 (Boss): Şef'in Sınavı** — 15 karışık cümle, her sıfat için 3 katmanlı puan
+  - Tespit (sıfatı tıkla): +1 · Tür seçimi (5 buton): +2 · Gerekçe (textarea, anahtar kelime auto-grade): +3
+  - 15 × 6 = max 90 puan
+  - 5 sıfat türünden 3'er soru; tasarım: koyu kahverengi şef başlığı + altın aksan
+- ✅ Öğretmen paneli: 6 sahne sütunu/kartı (lg:grid-cols-6, colSpan=11)
+- ✅ Hesap fişi: 6 satır
+- ✅ Landing: "6 sahnelik", hero metni güncellendi (5 sıfat türü + Boss)
+- ✅ E2E test: tam akış 126/126 puan ile geçti (Scene 6 Boss perfect 90/90)
+
+**Yeni grand total**: 36 + 90 = **126 puan**
+
 ## Implemented (2026-02 — Iteration 2)
 - ✅ **Sahne 4: Soru Sıfatları** — sipariş alma diyaloğu, 5 token (hangi/kaç/kaçıncı/ne/nasıl) + 3 cümle alıştırması (max 8 puan)
 - ✅ **Sahne 5: Belgisiz Sıfatlar** — tatlı sürprizi diyaloğu, 4 token (bazı/birkaç/hiçbir/tüm) + 3 cümle (her/birçok/bütün, max 7 puan)
@@ -54,7 +66,7 @@ Türkiye Maarif Modeli'ne uygun, 6. sınıf Türkçe dersi "Sıfat Türleri" kon
 ## Backlog (P0/P1/P2)
 
 ### P0 — Sonraki Iteration
-- [ ] **Sahne 6 (Boss)**: Şef'in Sınavı — 15 karışık cümle, tespit + tür + gerekçe (3 katmanlı puan)
+- [ ] **Canlı Turnuva Modu**: Öğretmen oda kodu oluşturur, öğrenciler katılır, aynı anda Boss seviyeyi çözer, canlı liderlik tablosu (websocket veya polling)
 
 ### P1
 - [ ] Öğretmen paneli: oturum detay sayfası (her cevabın ayrıntısı)

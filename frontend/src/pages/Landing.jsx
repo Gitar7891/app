@@ -66,8 +66,8 @@ const Landing = () => {
           <p className="font-body text-base sm:text-lg lg:text-xl text-[#E8DCC4] mt-6 max-w-xl leading-relaxed">
             Sıfat Restoranı'na hoş geldin! Garson{" "}
             <strong className="text-[#D4AF37]">Sıfat Bey</strong>, seni niteleme,
-            işaret ve sayı sıfatlarıyla dolu bir akşam yemeğine davet ediyor.
-            Her masada yeni bir keşif var.
+            işaret, sayı, soru ve belgisiz sıfatlarla dolu bir akşam yemeğine
+            davet ediyor. Final masada Şef'in sınavı seni bekliyor.
           </p>
 
           <ul className="mt-8 space-y-2 font-body text-sm text-[#E8DCC4]/90">
