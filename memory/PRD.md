@@ -28,6 +28,15 @@ Türkiye Maarif Modeli'ne uygun, 6. sınıf Türkçe dersi "Sıfat Türleri" kon
 - Türk lokantası atmosferi
 - Maarif Modeli değerleri (misafirperverlik, nezaket, paylaşım)
 
+## Implemented (2026-02 — Iteration 2)
+- ✅ **Sahne 4: Soru Sıfatları** — sipariş alma diyaloğu, 5 token (hangi/kaç/kaçıncı/ne/nasıl) + 3 cümle alıştırması (max 8 puan)
+- ✅ **Sahne 5: Belgisiz Sıfatlar** — tatlı sürprizi diyaloğu, 4 token (bazı/birkaç/hiçbir/tüm) + 3 cümle (her/birçok/bütün, max 7 puan)
+- ✅ Generic `IdentifyScene` bileşeni (DRY için) — Sahne 4 ve 5 paylaşıyor
+- ✅ Öğretmen paneli: 5 sahne sütunu + breakdown kartları (lg:grid-cols-5)
+- ✅ Hesap fişi: 5 satırlı sahne özeti
+- ✅ Landing: "5 sahnelik" güncellendi
+- ✅ E2E test: tam akış 36/36 puan ile geçti (Scene 1: 9 + 2: 4 + 3: 8 + 4: 8 + 5: 7)
+
 ## Implemented (2026-02 — Iteration 1)
 - ✅ Landing sayfası (rezervasyon defteri tarzı isim girişi)
 - ✅ Sahne 1: Niteleme sıfatları — diyalog içinde tıklama + 3 cümle alıştırması (max 9 puan)
@@ -45,8 +54,6 @@ Türkiye Maarif Modeli'ne uygun, 6. sınıf Türkçe dersi "Sıfat Türleri" kon
 ## Backlog (P0/P1/P2)
 
 ### P0 — Sonraki Iteration
-- [ ] **Sahne 4**: Soru sıfatları (hangi/kaç/ne/nasıl/kaçıncı) — sipariş alma akışı
-- [ ] **Sahne 5**: Belgisiz sıfatlar (bazı/birkaç/her/hiçbir) — bulanık cam efekti, sil-keşfet
 - [ ] **Sahne 6 (Boss)**: Şef'in Sınavı — 15 karışık cümle, tespit + tür + gerekçe (3 katmanlı puan)
 
 ### P1
