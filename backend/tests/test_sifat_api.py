@@ -87,6 +87,28 @@ def test_update_scene_recomputes_totals(client, created_session):
     assert r3.json()["total_score"] == 21
     assert r3.json()["max_score"] == 21
 
+    # scene 4 (Soru) - max 8 (5 phase1 + 3 phase2)
+    r4 = client.put(f"{API}/sessions/{sid}/scene", json={
+        "scene": "scene_4", "score": 8, "max_score": 8,
+        "answers": [{"phase": "identify", "picked": ["Hangi", "Kaç", "Kaçıncı", "Ne", "Nasıl"]}],
+    })
+    assert r4.status_code == 200
+    d4 = r4.json()
+    assert d4["total_score"] == 29
+    assert d4["max_score"] == 29
+    assert "scene_4" in d4["scenes"]
+
+    # scene 5 (Belgisiz) - max 7 (4 phase1 + 3 phase2)
+    r5 = client.put(f"{API}/sessions/{sid}/scene", json={
+        "scene": "scene_5", "score": 7, "max_score": 7,
+        "answers": [{"phase": "identify", "picked": ["Bazı", "Birkaç", "Hiçbir", "Tüm"]}],
+    })
+    assert r5.status_code == 200
+    d5 = r5.json()
+    assert d5["total_score"] == 36
+    assert d5["max_score"] == 36
+    assert "scene_5" in d5["scenes"]
+
 
 def test_update_scene_404(client):
     r = client.put(f"{API}/sessions/missing-id/scene", json={
@@ -138,7 +160,7 @@ def test_teacher_stats(client, created_session):
         assert k in stats
     assert stats["total_students"] >= 1
     assert stats["total_completed"] >= 1
-    for sk in ("scene_1", "scene_2", "scene_3"):
+    for sk in ("scene_1", "scene_2", "scene_3", "scene_4", "scene_5"):
         assert sk in stats["scene_stats"]
         for f in ("avg_score", "avg_max", "participants", "avg_percent"):
             assert f in stats["scene_stats"][sk]

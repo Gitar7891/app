@@ -50,6 +50,8 @@ const GameSummary = ({ session }) => {
             { key: "scene_1", label: "1. Karşılama (Niteleme)" },
             { key: "scene_2", label: "2. Masa (İşaret)" },
             { key: "scene_3", label: "3. Menü (Sayı)" },
+            { key: "scene_4", label: "4. Sipariş (Soru)" },
+            { key: "scene_5", label: "5. Tatlı (Belgisiz)" },
           ].map((row) => {
             const s = scenes[row.key] || { score: 0, max_score: 0 };
             return (

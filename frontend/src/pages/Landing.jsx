@@ -71,7 +71,7 @@ const Landing = () => {
           </p>
 
           <ul className="mt-8 space-y-2 font-body text-sm text-[#E8DCC4]/90">
-            <li>• 3 sahnelik interaktif restoran deneyimi (MVP)</li>
+            <li>• 5 sahnelik interaktif restoran deneyimi</li>
             <li>• Sesli anlatım (Türkçe)</li>
             <li>• Anlık geri bildirim ve öğretmen raporu</li>
           </ul>

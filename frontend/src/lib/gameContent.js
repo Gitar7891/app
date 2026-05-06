@@ -149,4 +149,102 @@ export const SCENE_3 = {
   values: "Paylaşım: Üleştirme sıfatları eşit paylaşımı hatırlatır.",
 };
 
-export const SCENES = [SCENE_1, SCENE_2, SCENE_3];
+// ============ SAHNE 4 ============
+export const SCENE_4 = {
+  id: "scene_4",
+  title: "Sipariş Soruları — Soru Sıfatları",
+  subtitle: "Sahne 4 / 5",
+  accent: "soru",
+  waiterIntro: [
+    "Şimdi siparişinizi alabilir miyim efendim?",
+    "Hangi masayı tercih edersiniz, kaç kişi olacaksınız?",
+    "Kaçıncı sıradaki yere geçelim?",
+    "Ne tür bir yemek arzu edersiniz, nasıl bir tatlı istersiniz?",
+  ],
+  dialogTokens: [
+    { t: "Sipariş alıyorum efendim." },
+    { t: "Hangi", isAdj: true },
+    { t: "masayı tercih edersiniz?" },
+    { t: "Kaç", isAdj: true },
+    { t: "kişi olacaksınız?" },
+    { t: "Kaçıncı", isAdj: true },
+    { t: "sıradaki yere geçelim?" },
+    { t: "Ne", isAdj: true },
+    { t: "tür yemek arzu edersiniz?" },
+    { t: "Nasıl", isAdj: true },
+    { t: "bir tatlı düşünüyorsunuz?", final: true },
+  ],
+  rule:
+    "Soru sıfatları, isimleri soru yoluyla niteler ve her zaman isimden önce gelir: hangi masa, kaç kişi, ne tür, nasıl bir, kaçıncı sıra.",
+  multiSentence: [
+    {
+      id: "s4_q1",
+      sentence: "Hangi tatlıyı seçeceksiniz?",
+      words: ["Hangi", "tatlıyı", "seçeceksiniz?"],
+      correct: ["Hangi"],
+    },
+    {
+      id: "s4_q2",
+      sentence: "Kaç porsiyon getirelim?",
+      words: ["Kaç", "porsiyon", "getirelim?"],
+      correct: ["Kaç"],
+    },
+    {
+      id: "s4_q3",
+      sentence: "Nasıl bir kahve içersiniz?",
+      words: ["Nasıl", "bir", "kahve", "içersiniz?"],
+      correct: ["Nasıl"],
+    },
+  ],
+  values: "Nezaket: Garson seçenek sunarak müşteriyi yönlendirir, dayatmaz.",
+};
+
+// ============ SAHNE 5 ============
+export const SCENE_5 = {
+  id: "scene_5",
+  title: "Tatlı Sürprizi — Belgisiz Sıfatlar",
+  subtitle: "Sahne 5 / 5",
+  accent: "belgisiz",
+  waiterIntro: [
+    "Akşamın sonuna yaklaştık efendim.",
+    "Bazı masalara özel tatlı hazırladık.",
+    "Birkaç çeşit dondurma da var.",
+    "Hiçbir misafirimizi boş göndermeyiz; tüm masalara ikramımız olacak.",
+  ],
+  dialogTokens: [
+    { t: "Akşamın sonuna yaklaştık." },
+    { t: "Bazı", isAdj: true },
+    { t: "masalara özel tatlı hazırladık." },
+    { t: "Birkaç", isAdj: true },
+    { t: "çeşit dondurma var." },
+    { t: "Hiçbir", isAdj: true },
+    { t: "misafirimizi boş göndermeyiz." },
+    { t: "Tüm", isAdj: true },
+    { t: "masalara ikramımız olacak.", final: true },
+  ],
+  rule:
+    "Belgisiz sıfatlar, isimlerin sayısını ya da miktarını kesin olmayan biçimde belirtir: bazı, birkaç, hiçbir, tüm, her, birçok, bütün…",
+  multiSentence: [
+    {
+      id: "s5_q1",
+      sentence: "Her gece farklı bir özel menü hazırlıyoruz.",
+      words: ["Her", "gece", "farklı", "bir", "özel", "menü", "hazırlıyoruz."],
+      correct: ["Her"],
+    },
+    {
+      id: "s5_q2",
+      sentence: "Birçok müşteri bizi tercih ediyor.",
+      words: ["Birçok", "müşteri", "bizi", "tercih", "ediyor."],
+      correct: ["Birçok"],
+    },
+    {
+      id: "s5_q3",
+      sentence: "Bütün çocuklara şeker ikram ediyoruz.",
+      words: ["Bütün", "çocuklara", "şeker", "ikram", "ediyoruz."],
+      correct: ["Bütün"],
+    },
+  ],
+  values: "Paylaşım & Misafirperverlik: Restoran herkese özen gösterir, kimseyi ayırmaz.",
+};
+
+export const SCENES = [SCENE_1, SCENE_2, SCENE_3, SCENE_4, SCENE_5];

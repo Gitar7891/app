@@ -7,7 +7,11 @@ const SCENE_META = {
   scene_1: { label: "Niteleme", color: "#C44900" },
   scene_2: { label: "İşaret", color: "#D68C45" },
   scene_3: { label: "Sayı", color: "#4A6741" },
+  scene_4: { label: "Soru", color: "#2C4251" },
+  scene_5: { label: "Belgisiz", color: "#8C7A6B" },
 };
+
+const SCENE_KEYS = ["scene_1", "scene_2", "scene_3", "scene_4", "scene_5"];
 
 const formatDate = (iso) => {
   if (!iso) return "—";
@@ -138,7 +142,7 @@ const TeacherDashboard = () => {
             <h2 className="font-serif-display text-lg text-[#2A2421] mb-4">
               Sahne Bazında Ortalama
             </h2>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
               {Object.entries(stats.scene_stats).map(([key, s]) => {
                 const meta = SCENE_META[key];
                 return (
@@ -194,6 +198,8 @@ const TeacherDashboard = () => {
                   <th className="px-5 py-3 font-serif-display">S1</th>
                   <th className="px-5 py-3 font-serif-display">S2</th>
                   <th className="px-5 py-3 font-serif-display">S3</th>
+                  <th className="px-5 py-3 font-serif-display">S4</th>
+                  <th className="px-5 py-3 font-serif-display">S5</th>
                   <th className="px-5 py-3 font-serif-display text-right">
                     Toplam
                   </th>
@@ -202,14 +208,14 @@ const TeacherDashboard = () => {
               <tbody>
                 {loading && (
                   <tr>
-                    <td colSpan={8} className="text-center py-12 text-[#8C7A6B]">
+                    <td colSpan={10} className="text-center py-12 text-[#8C7A6B]">
                       Yükleniyor...
                     </td>
                   </tr>
                 )}
                 {!loading && filtered.length === 0 && (
                   <tr>
-                    <td colSpan={8} className="text-center py-12 text-[#8C7A6B]">
+                    <td colSpan={10} className="text-center py-12 text-[#8C7A6B]">
                       Henüz oturum yok.
                     </td>
                   </tr>
@@ -243,7 +249,7 @@ const TeacherDashboard = () => {
                           <span className="text-[#D68C45] text-xs">Devam</span>
                         )}
                       </td>
-                      {["scene_1", "scene_2", "scene_3"].map((sk) => {
+                      {SCENE_KEYS.map((sk) => {
                         const sc = s.scenes?.[sk];
                         return (
                           <td
